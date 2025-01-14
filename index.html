@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend on Firebase</title>
+</head>
+<body>
+    <h1>Frontend Hosted on Firebase</h1>
+    <div id="response">Loading...</div>
+    <script>
+        async function fetchData() {
+            try {
+                const response = await fetch('http://65.2.57.41:5000/');
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const data = await response.json();
+                document.getElementById('response').textContent = data.message;
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                document.getElementById('response').textContent = 'Failed to load data from backend.';
+            }
+        }
+
+        fetchData();
+    </script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCqTShNfA8gTkHbkLnMSzxVL1o_GqLwEgA",
+          authDomain: "sejal-pawar-viral-fission.firebaseapp.com",
+          projectId: "sejal-pawar-viral-fission",
+          storageBucket: "sejal-pawar-viral-fission.firebasestorage.app",
+          messagingSenderId: "79790684836",
+          appId: "1:79790684836:web:905f26d9020070c4818431",
+          measurementId: "G-T7Z6D83909"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+</body>
+</html>
