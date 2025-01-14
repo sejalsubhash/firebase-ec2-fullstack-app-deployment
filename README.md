@@ -6,13 +6,23 @@ This project is a full-stack web application where the **frontend** is hosted on
 ## Table of Contents
 1. [Prerequisites](#prerequisites)
 2. [Project Setup](#project-setup)
-    - [Frontend Setup](#frontend-setup)
-    - [Backend Setup](#backend-setup)
-3. [Running the Application Locally](#running-the-application-locally)
-4. [Deployment Steps](#deployment-steps)
+3. [Frontend Setup](#frontend-setup)
+    - [Firebase Hosting Setup](#firebase-hosting-setup)
     - [Frontend Deployment (Firebase)](#frontend-deployment-firebase)
+4. [Backend Setup](#backend-setup)
+    - [AWS EC2 with Flask API](#aws-ec2-with-flask-api)
+    - [Run the Flask Server](#run-the-flask-server)
+    - [Allow CORS in Your Flask API](#allow-cors-in-your-flask-api)
+5. [Frontend-Backend Communication](#frontend-backend-communication)
+6. [Running the Application Locally](#running-the-application-locally)
+    - [Frontend](#frontend)
+    - [Backend](#backend)
+7. [Deployment Steps](#deployment-steps)
+    - [Frontend Deployment (Firebase)](#frontend-deployment-firebase-1)
     - [Backend Deployment (AWS EC2)](#backend-deployment-aws-ec2)
-5. [Notes](#notes)
+8. [Conclusion](#conclusion)
+
+
 
 ## Prerequisites
 Before you begin, ensure that you have the following installed:
