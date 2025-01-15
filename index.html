@@ -3,31 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontend on Firebase</title>
+    <title>Frontend with API Request</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #response {
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <h1>Frontend Hosted on Firebase</h1>
-    <div id="response">Loading...</div>
+    <h1>API Request Example</h1>
+    <p>Click the button below to fetch data from the backend:</p>
+    <!-- Button to trigger the API request -->
+    <button id="fetchButton">Fetch Data</button>
+    <div id="response">Response will appear here...</div>
+
     <script>
+        // Function to fetch data from the backend
         async function fetchData() {
             try {
+                // API request to the backend
                 const response = await fetch('http://65.2.57.41:5000/');
 
+                // Check if the response is OK
                 if (!response.ok) {
-                    throw new Error('Network response was not ok');
+                    throw new Error('Failed to fetch data from the backend');
                 }
 
+                // Parse the JSON response
                 const data = await response.json();
+
+                // Display the response message from the backend
                 document.getElementById('response').textContent = data.message;
             } catch (error) {
-                console.error('Error fetching data:', error);
-                document.getElementById('response').textContent = 'Failed to load data from backend.';
+                // Handle any errors
+                document.getElementById('response').textContent = `Error: ${error.message}`;
             }
         }
 
-        fetchData();
+        // Add event listener to the button
+        document.getElementById('fetchButton').addEventListener('click', fetchData);
     </script>
-
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
@@ -43,8 +64,8 @@
           projectId: "sejal-pawar-viral-fission",
           storageBucket: "sejal-pawar-viral-fission.firebasestorage.app",
           messagingSenderId: "79790684836",
-          appId: "1:79790684836:web:905f26d9020070c4818431",
-          measurementId: "G-T7Z6D83909"
+          appId: "1:79790684836:web:d557c5dd377a3013818431",
+          measurementId: "G-E24XVFPZ1B"
         };
       
         // Initialize Firebase
