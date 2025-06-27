@@ -1,4 +1,4 @@
-# viral-fission-task
+# Full Stack Web App with Firebase Frontend & AWS EC2 Backend
 # Full Stack Application: Frontend on Firebase & Backend on AWS EC2
 
 This project is a full-stack web application where the **frontend** is hosted on **Firebase** and the **backend** is hosted on **AWS EC2**. The frontend communicates with the backend via HTTP requests and displays data fetched from the backend.
