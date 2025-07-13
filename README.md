@@ -1,13 +1,4 @@
-Here’s your **enhanced and professional version** of the `README.md` for the project **"Full Stack Application: Firebase Frontend + AWS EC2 Backend"**. The enhancements include:
 
-* ✅ Clean formatting
-* ✅ Section highlights
-* ✅ Clear step-by-step instructions
-* ✅ Emojis for better readability
-* ✅ Added titles and better structure
-* ✅ Enhanced conclusion
-
----
 
 ````markdown
 # 🌐 Full Stack Web App with Firebase Frontend & AWS EC2 Backend
