@@ -1,6 +1,3 @@
-
-
-````markdown
 # 🌐 Full Stack Web App with Firebase Frontend & AWS EC2 Backend
 
 This project is a **full-stack web application** where the **frontend** is hosted on **Firebase Hosting** and the **backend** is hosted on an **AWS EC2 instance** running a Flask API. The frontend interacts with the backend over HTTP requests to fetch and display real-time data.
